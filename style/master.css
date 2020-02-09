@@ -96,6 +96,12 @@ section {
     width: 20px; 
     padding: 10px 5px;
 }
+.searching svg {
+    padding-left: 20px;
+}
+.microfono-google {
+    padding-right: 20px;
+}
 .searching {
     border: solid 1px rgba( 0, 0, 0, .1);
     border-radius: 20px;
@@ -108,7 +114,7 @@ section {
 .searching input {
    border: none; 
     font-size: 20px;
-    width: 40vw;
+    width: 38vw;
     outline: none;
 }
 .microfono-google {
@@ -119,19 +125,25 @@ section {
     width: 100%;
     object-fit: cover;
 }
-
-section article button{
-    padding: 10px 20px;
-    background: #F4F4F4;
-    box-sizing: border-box;
-    border: none;
-    font-size: 1.05em;
-    margin: 20px;
+.buttons {
+   
 }
-section article button:hover {
-    border: solid 1px rgba( 0, 0, 0, .1);
+.buttons button{
+    background: #F4F4F4;
+    border: none;
     cursor: pointer;
-}    
+    padding: 10px 20px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin: 20px 4px;
+    font-size: 1.02em;
+}
+.buttons button:hover{ 
+    box-shadow: 0 0 1px 1px rgba( 0, 0, 0, .3);
+    color: #000000;
+}
+
+
 /* end central */
 /* footer */
 footer {

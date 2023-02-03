@@ -1,0 +1,9 @@
+*/design/
+!*preview.jpg
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
+.vercel
+README-template.md

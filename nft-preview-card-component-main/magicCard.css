@@ -1,0 +1,101 @@
+/* inspiration by */
+/* https://codepen.io/gayane-gasparyan */
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.2);
+  }
+  
+  .card {
+    background: #191c29;
+    width: var(--card-width);
+    min-height: var(--card-height);
+    position: relative;
+    border-radius: 6px;
+
+  }
+  
+  .card:hover:before, .card:hover:after {
+    
+    opacity: 1;
+    animation: spin 2.5s linear infinite;
+  }
+  .card::before{
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    background-image: linear-gradient(
+      var(--rotate)
+      ,#5ddcff, #3c67e3 43%, #4e00c2);
+    border-radius: 8px;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: none;
+  } 
+
+
+  
+  .card:hover:before {
+    width: 104%;
+    height: 102%;
+    top: -1%;
+    left: -2%;
+  }
+  
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 0;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  /* I see */
+
+  .magic{
+    position: relative;
+    animation: spin 2.5s linear reverse infinite;
+    background-image: linear-gradient(
+      var(--rotate)
+      ,#5ddcff, #3c67e3 43%, #4e00c2);
+    border-radius: 8px;
+    content: "";
+    animation: none;   
+  }
+
+  .magic:hover{ 
+    animation: spin 2.5s linear infinite;
+  }
+
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+ 

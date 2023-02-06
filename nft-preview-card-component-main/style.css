@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import url('./magicCard.css');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+
+hr {
+    background-color: var(--Soft-blue);
+}
+.owner {
+    height: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.content ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content h1 {
+    font-size: 1rem;
+    color: var(--White);
+}
+
+
+.container__nft, .content {
+    width: 100%;
+    padding: 25px;
+    color: var(--Soft-blue);
+}
+.container__nft figure {
+    border-radius: 5px;
+    /* overflow: hidden; */
+    width: 100%;
+    line-height: 0;
+    position: relative;
+    background-color: red;
+}
+
+
+.container__nft figure img{
+    cursor: pointer;
+    opacity: .4s;
+}
+
+.eye {
+    position: absolute;
+    opacity: 0;
+    right: 50%;
+    top: 50%;
+    transform: translate( 50%, -50% );
+    transition: .4s;
+}
+.container__nft figure:hover .eye{
+    opacity: 1;
+}
+
+.container__nft figure img:hover {
+    mix-blend-mode: screen;
+}
+
+
+.owner img {
+    height: 100%;
+    margin-right: 10px;
+    border: solid 1px var(--White);
+    border-radius: 50%;
+   
+}
+
+.content {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    
+}
+.content > * {
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.eterium {
+    color: var(--Cyan);
+}
+
+.container__nft img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card{
+    background-color: var(--Very-dark-blue-card-BG);
+    border-radius: 5px;
+}
+
+
+.owner span, h1, .eterium{
+    cursor: pointer;
+}
+
+.owner span:hover, h1:hover {
+    color: var(--Cyan);
+}
+
+main {
+    box-shadow: 0 15px 0 12px rgba(0, 0, 0, .05), 0 15px 0 40px rgba(0, 0, 0, .05);
+}
+main:hover {
+    box-shadow: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+

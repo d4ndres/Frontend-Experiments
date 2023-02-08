@@ -1,8 +1,7 @@
 # Frontend Mentor - NFT preview card component
 
-Alguna vez has visto un background gradient rotar. 
-Echale un vistaso seguro te encantara.
-
+Have you ever seen a background gradient rotate?
+Take a look, I'm sure you'll love it.
 [Deploy](https://nft-preview-card-component-black.vercel.app/)
 
 ## Welcome! 👋

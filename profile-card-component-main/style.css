@@ -1,11 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+@keyframes spin {
+    0% {
+      --rotate: 0deg
+    }
+    100% {
+      --rotate: 365deg;
+    }
+  }
+
 :root{
     --Dark-cyan: hsl(185, 75%, 39%);
     --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
-    --Dark-grayish-blue: hsl(227, 10%, 46%)   
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
 }
+
+
 
 html {
     font-size: 18px;
+    /* background: hsl(var(--rotate), 50%, 50%); */
+    background: linear-gradient(132deg , #5ddcff, #3c67e3 43%, #4e00c2);
+    /* animation: spin 2.5s linear infinite; */
 }
 * {
     padding: 0;
@@ -13,4 +35,95 @@ html {
     box-sizing: 0;
     list-style: none;
     text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+h1, h3, strong {
+    color: var(--Very-dark-desaturated-blue)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/bg-pattern-bottom.svg), url(./images/bg-pattern-top.svg);
+    background-position: 140% -110%, -47% 178%;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+:root{
+    --card-height: 60vh;
+    --card-width: calc( var(--card-height)/ 1.1 )
+}
+
+main{
+    height: var(--card-height);
+    width: min( var(--card-width), 90vw);
+    border-radius: 11px;
+    overflow: hidden;
+}
+.mini__bg {
+    width: 100%;
+    height:  calc( var(--card-height) * .35);
+    background:  url('./images/bg-pattern-card.svg'), linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2 );
+    display: block;
+    background-blend-mode: hard-light; 
+    animation: spin 2.5s linear infinite;
+}
+main:hover .mini__bg {
+    animation-play-state: paused;
+}
+.content__about{
+    position: relative;
+}
+
+figure {
+    width: 100px;
+    line-height: 0;
+    border-radius: 50%;
+    border: solid 5px #fff;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 0;
+    right: 50%;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 50%;
+}
+.base__data__user{
+    padding-top: 60px;
+    text-align: center;
+    font-size: .8rem;
+}
+h1 {
+    margin-bottom: .5rem;
+}
+.content__stats{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+.item p {
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc( var(--card-height) * .65);
+}
+h1 span {
+    font-weight: 400;
 }
